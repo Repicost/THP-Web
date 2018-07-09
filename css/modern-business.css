@@ -1,0 +1,128 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.thp-logo{
+	height: 59px;
+	width: 92px;
+	background-position: center;
+	background-size: contain;
+}
+
+.collapse .nav li a{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.dropdown-menu > li > a
+{
+	color: black;
+}
+.collapse .nav li a:hover{
+	color: white;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+.mainParagraphs {
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.formClass {
+	padding-right:60px;
+}
+
+.searchBar {
+	width: 500px;
+}
+
+
+
+
+/*CHRISTINE GALLERY CSS*/
+.gallery{
+	margin: 10px 50px;
+}
+
+.gallery img{
+	width: 300px;
+	padding: 10px;
+	filter: grayscale(100%);
+	transition: 1s;
+}
+.gallery img:hover{
+	filter: grayscale(0);
+	transform: scale(1.1);
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+		margin-bottom: 10px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+		margin-bottom: 500px;
+}
