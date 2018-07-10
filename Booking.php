@@ -25,7 +25,7 @@ input[type=date],select {
     background-color:white;
     width:1000px;
     height:610px;
-    box-shadow:20px 20px 50px grey;  
+    box-shadow:20px 20px 50px grey;
 }
 .div7{
 	position: relative;
@@ -62,7 +62,7 @@ input[type=date],select {
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-      <a href = "index.html" >
+      <a href = "index.php" >
         <img src="thp.png" alt="Trulli" width="100" height="55">
       </a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,7 +73,7 @@ input[type=date],select {
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="Gallery.php">Gallery</a>
+                <a class="nav-link" href="gallery.php">Gallery</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Booking.php">Booking</a>
@@ -91,8 +91,8 @@ input[type=date],select {
                   Other Pages
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                  <a class="dropdown-item" href="login.php">Full Width Page</a>
-                  <a class="dropdown-item" href="signup.php">Sidebar Page</a>
+                  <a class="dropdown-item" href="Login.php">Login</a>
+                  <a class="dropdown-item" href="signup.php">signup</a>
                   <a class="dropdown-item" href="History.php">History</a>
                 </div>
               </li>
@@ -108,14 +108,14 @@ input[type=date],select {
 <br>
 
 
-<?php	
+<?php
 
 	$host = "localhost";
 	$user = "root";
 	$password = "";
 	$dbname = "thp";
 	$con = mysqli_connect($host,$user,$password,$dbname) or die("Error " . mysqli_error($con));
-	
+
 if(isset($_POST['BtnNext'])){
     //$des_id = $_POST['des_id'];
 	$des_location = $_POST['des_location'];
@@ -125,60 +125,60 @@ if(isset($_POST['BtnNext'])){
 	$des_rate = $_POST['des_rate'];
 	$des_date = $_POST['des_date'];
     $des_lastDate = $_POST['des_lastDate'];
-	
-	if($des_location=='')  
-    {  
-        //javascript use for input checking  
-        echo"<script>alert('Please enter the location')</script>";  
-	exit();//this use if first is not work then other will not show  
+
+	if($des_location=='')
+    {
+        //javascript use for input checking
+        echo"<script>alert('Please enter the location')</script>";
+	exit();//this use if first is not work then other will not show
     }
-   if($des_pickup=='')  
-    {  
-        //javascript use for input checking  
-        echo"<script>alert('Please enter the pick-up point')</script>";  
-	exit();//this use if first is not work then other will not show  
-    } 
-	if($des_dropoff=='')  
-    {  
-        //javascript use for input checking  
-        echo"<script>alert('Please enter the drop-off point')</script>";  
-	exit();//this use if first is not work then other will not show  
-    } 	
-	if($des_cription=='')  
-    {  
-        //javascript use for input checking  
-        echo"<script>alert('Please enter additional information')</script>";  
-	exit();//this use if first is not work then other will not show  
-    } 
-	if($des_date=='')  
-    {  
-        //javascript use for input checking  
-        echo"<script>alert('Please enter the date of departure')</script>";  
-	exit();//this use if first is not work then other will not show  
-    } 
-	if($des_lastDate=='')  
-    {  
-        //javascript use for input checking  
-        echo"<script>alert('Please enter the date of arrival')</script>";  
-	exit();//this use if first is not work then other will not show  
-    } 
-    
-	
-	
-	
-	
-	
-	
-	$query= "INSERT INTO `destination`(`des_location`,`des_pickup`, `des_dropoff`, 
-	`des_cription`, `des_rate`, `des_date`, `des_lastDate`) 
+   if($des_pickup=='')
+    {
+        //javascript use for input checking
+        echo"<script>alert('Please enter the pick-up point')</script>";
+	exit();//this use if first is not work then other will not show
+    }
+	if($des_dropoff=='')
+    {
+        //javascript use for input checking
+        echo"<script>alert('Please enter the drop-off point')</script>";
+	exit();//this use if first is not work then other will not show
+    }
+	if($des_cription=='')
+    {
+        //javascript use for input checking
+        echo"<script>alert('Please enter additional information')</script>";
+	exit();//this use if first is not work then other will not show
+    }
+	if($des_date=='')
+    {
+        //javascript use for input checking
+        echo"<script>alert('Please enter the date of departure')</script>";
+	exit();//this use if first is not work then other will not show
+    }
+	if($des_lastDate=='')
+    {
+        //javascript use for input checking
+        echo"<script>alert('Please enter the date of arrival')</script>";
+	exit();//this use if first is not work then other will not show
+    }
+
+
+
+
+
+
+
+	$query= "INSERT INTO `destination`(`des_location`,`des_pickup`, `des_dropoff`,
+	`des_cription`, `des_rate`, `des_date`, `des_lastDate`)
 	VALUES ('$des_location','$des_pickup','$des_dropoff','$des_cription','$des_rate','$des_date','$des_lastDate')";
 	$result=mysqli_query($con,$query) or die ('ff');
 		echo "<script>alert('Processed Successfully!')</script>";
 		echo "<script>setTimeout(\"location.href='history.php';\",0);</script>";
-  
-	
-	
-	
+
+
+
+
 	//if(mysqli_query($con,"INSERT INTO student_tbl (StudNum, Fname, Lname, Age, Gender) VALUES ('$StudNum', '$Fname', '$Lname', '$Age', '$Gender')"))
 }
 
@@ -199,7 +199,7 @@ if(isset($_POST['BtnNext'])){
 <div class ="rows">
 
 		<!--div class ="col-sm-1">
-		
+
 			<img src="<?php echo PROFILE_LOGO;?>" style="height: 50px; width: 50px;">
 		</div>
                <!--?php
@@ -207,51 +207,51 @@ if(isset($_POST['BtnNext'])){
 				$dbc = mysqli_connect('localhost', 'root', '', 'thp') or die("Unable to connect to Database.");
 				$sql = "SELECT firstname, lastname, address FROM user WHERE email = '$email'";
 				mysqli_select_db($dbc,"dropdown");
-				
-				
-				
+
+
+
 				$result1 = mysqli_query($dbc, $sql);
 				$row = mysqli_fetch_array($result1);
 
 				echo "<p>" . $row["lastname"] . ", " . $row["firstname"] . "</p>";
 				echo "<p>" . $row["address"] . "</p>";
-				
+
 				<?php
 				$email = $_SESSION['Email'];
 				$dbc = mysqli_connect('localhost', 'root', '', 'thp') or die("Unable to connect to Database.");
 				$sql = "SELECT firstname, lastname, address FROM user WHERE email = '$email'";
 				mysqli_select_db($dbc,"dropdown");
-				
-				
-				
+
+
+
 				$result1 = mysqli_query($dbc, $sql);
 				$row = mysqli_fetch_array($result1);
 
 				echo "<p>" . $row["lastname"] . ", " . $row["firstname"] . "</p>";
 				echo "<p>" . $row["address"] . "</p>";
-				
-				
-				
-				
-				
-				
-					
-	
-	 				
-?>	
-
-				
-				
-				
-				
-					
-	
-	 				
-?-->	
 
 
 
-	
+
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+?-->
+
+
+
+
 
 
 
@@ -267,74 +267,74 @@ if(isset($_POST['BtnNext'])){
 				$password = "";
 				$dbname = "thp";
 				$con = mysqli_connect($host,$user,$password,$dbname) or die("Error " . mysqli_error($con));
-	
-				
+
+
 				$query = "select * from 'booking'";
                 $result= mysqli_query($con, $query);
 				$result2= mysqli_query ($con, $query);
 				$options = "";
 				while($row2 = mysqli_fetch_array($result2))
 				{
-					$options = $options."<options>$row2[1]</option>"	
-					
+					$options = $options."<options>$row2[1]</option>"
+
 				}
-				
+
 
 				//echo "<p>" . $row["lastname"] . ", " . $row["firstname"] . "</p>";
 			//	echo "<p>" . $row["address"] . "</p>";
-					
-	
-	 				
-?-->	
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>   
-<script type="text/javascript">   
-$(document).ready(function() {   
-$('#des_location').change(function(){   
-if($('#des_location').val() === 'NAIA')   
-   {   
-   $('#other').show();    
-   }   
-else 
-   {   
-   $('#other').hide();      
-   }   
-});  
-});   
-
-
-</script>   
-
-<script type="text/javascript">   
-$(document).ready(function() {   
-$('#des_location').change(function(){   
-if($('#des_location').val() === 'MANILA')   
-   {   
-   $('#other1').show();    
-   }   
-else 
-   {   
-   $('#other1').hide();      
-   }   
-});  
-});   
-
-
-</script>   
 
 
 
+?-->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('#des_location').change(function(){
+if($('#des_location').val() === 'NAIA')
+   {
+   $('#other').show();
+   }
+else
+   {
+   $('#other').hide();
+   }
+});
+});
 
 
-  <form method="post"  enctype="multipart/form-data"> 
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$('#des_location').change(function(){
+if($('#des_location').val() === 'MANILA')
+   {
+   $('#other1').show();
+   }
+else
+   {
+   $('#other1').hide();
+   }
+});
+});
+
+
+</script>
+
+
+
+
+
+  <form method="post"  enctype="multipart/form-data">
 	&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp;
-	<td> 
+	<td>
 
 			<script language="JavaScript">
 			<!--
 
 			function changeValue() {
-			  var values = ['No Item Selected', '₱2,500.00', '₱3,500.00', '₱3,600.00', '₱3,600.00','₱4,000.00', 
+			  var values = ['No Item Selected', '₱2,500.00', '₱3,500.00', '₱3,600.00', '₱3,600.00','₱4,000.00',
 			  '₱3,500.00', '₱3,600.00', '₱3,700.00','₱4,700.00','₱4,900.00','₱4,200.00','₱4,500.00','₱5,000.00',
 			  '₱4,800.00','₱5,000.00','₱5,500.00','₱5,200.00','₱5,700.00','₱5,300.00','₱5,500.00','₱4,800.00',
 			  '₱4,400.00','₱4,200.00','₱4,100.00','₱4,200.00','₱4,500.00','₱4,600.00','₱5,000.00','₱5,300.00',
@@ -342,7 +342,7 @@ else
 			  '₱6,700.00','₱6,000.00','₱5,500.00','₱5,500.00','₱7,000.00','₱7,500.00','₱7,900.00','₱6,400.00 ',
 			  '₱6,300.00 ','₱6,200.00 ','₱7,400.00','₱7,500.00','₱8,300.00','₱7,800.00','₱8,600.00','₱9,500.00',
 			  '₱10,200.00','₱11,200.00','₱14,500.00','₱12,000.00','₱13,400.00',
-			  
+
 			  '₱3,500.00','₱3,500.00','₱5,500.00','₱5,500.00','₱5,500.00','₱5,500.00','₱5,500.00','₱5,500.00',
 			  '₱5,500.00','₱5,500.00','₱5,500.00','₱6,000.00','₱7,500.00','₱6,500.00','₱8,000.00','₱6,500.00',
 			  '₱8,000.00','₱6,500.00','₱8,000.00','₱12,000.00','₱4,500.00','₱5,000.00','₱6,500.00','₱6,500.00',
@@ -352,9 +352,9 @@ else
 			  document.getElementById('des_rate').value = values[document.getElementById('des_location').selectedIndex];
 			 }
             </script>
-	
+
 	<!--<select name="des_location" id="des_location" class="des_location" placeholder="Destination" name="des_location" >
-  <option selected="selected" value=""  disabled> select... </option> 
+  <option selected="selected" value=""  disabled> select... </option>
   </select>-->
 <!--?php
 
@@ -415,7 +415,7 @@ while($row2 = mysqli_fetch_array($result2))
             <!--?php endwhile;?>
 
         </select>
-        
+
        <!-- Method Two -->
 
        <!--&nbsp; &nbsp; &nbsp; &nbsp; Price: 	<select>
@@ -428,19 +428,19 @@ while($row2 = mysqli_fetch_array($result2))
 
 
 
-  
-  
+
+
 	</tr>
 	<tr>
-	
+
 	<!--<td> &nbsp; &nbsp; &nbsp; Price:  <td> <input type="text" id="des_rate" name="des_rate" readonly> </td>
-	<!--<p id="des_rate" class="des_rate" name="des_rate" style="display:none">3900!</p>--> 
+	<!--<p id="des_rate" class="des_rate" name="des_rate" style="display:none">3900!</p>-->
 	</tr>
 	<br>
-	<br>	
-  
+	<br>
 
-	
+
+
 	<!--​<script>
 function myFunction() {
     var option = document.getElementById("Kawit");
@@ -508,19 +508,19 @@ function myFunction() {
 		<option value=''>Quezon,Mauban</option>
 		<option value=''>Quezon,Dolores</option>
 		<option value=''>Quezon,Tiaong </option>
-		<option value=''>Quezon,Villa Escudero</option>	
+		<option value=''>Quezon,Villa Escudero</option>
 		<option value=''>Quezon,Candelaria	 </option>
 		<option value=''>Quezon,Sariaya</option>
-		<option value=''>Quezon,Lucena</option>		
+		<option value=''>Quezon,Lucena</option>
 		<option value=''>Quezon,Tayabas</option>
 		<option value=''>Quezon,Pagbilao</option>
-		<option value=''>Quezon,Atimonan</option>	
+		<option value=''>Quezon,Atimonan</option>
 		<option value=''>Quezon,Gumaca</option>
 		<option value=''>Quezon,Gen.Luna</option>
 		<option value=''>Quezon,San Andres Port</option>
 		<option value=''>Quezon,Calauag </option>
 		<option value=''>Quezon,San Narciso</option>
-		
+
 	    <option value=''>Enchanted Kingdom</option>
 		<option value=''>Bulacan</option>
 	    <option value=''>Pansol,Laguna(day tour)</option>
@@ -542,7 +542,7 @@ function myFunction() {
 		<option value=''>Kwebang Lagpas(2 days 1 night)</option>
 		<option value=''>Mauban Port,Borawan,Real,Jomalig(2 days 1 night)</option>
 	    <option value=''>Mt. Batolusong,Mt. Cayabo,Mt. Maynobo,Tanay,Rizal(day tour)</option>
-		<option value=''>Mt. Daraitan,Masungi Georeserve(day tour)</option> 		
+		<option value=''>Mt. Daraitan,Masungi Georeserve(day tour)</option>
 		<option value=''>Subic(day tour)</option>
 		<option value=''>Las Casas(day tour)</option>
 	    <option value=''>Bagac(day tour)</option>
@@ -560,55 +560,55 @@ function myFunction() {
 		<option value=''>Baguio,Benguet,La Preza,La Trinidad,Mt.Ulap,Mt. Purgatory,Mt. Pulag(2 days, 1 night)</option>
 		<option value=''>Mt. Ugo(2 days, 1 night)</option>
 	    <option value=''>Sagada, Banaue, Kalinga, Buscalan(3 days,2 nights)</option>
-		<option value=''>Ilocos Tour(3 days, 2 nights)</option>	
+		<option value=''>Ilocos Tour(3 days, 2 nights)</option>
 		<option value=''>Calaguas(2 days, 1 night)</option>
 		<option value=''>Sabang Port(2 days, 1 night)</option>
 	    <option value=''>Caramoan(3 days,2 nights)</option>
 		<option value=''>Albay(3 days, 2 nights)</option>
 	    <option value=''>Matnog(3 days, 2 nights)</option>
-		
-		
-		
-		
+
+
+
+
 		<!--option value=''>Item 8</item-->
 		</select>
-		
 
 
-		
-		
-	
-	 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <td><input type='text' id='des_rate' name='des_rate' value='No location Selected' readonly> 
+
+
+
+
+	 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <td><input type='text' id='des_rate' name='des_rate' value='No location Selected' readonly>
 		</form>
-		
-		
-	 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+
+	 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 	 <b><input type="text" id="other" name="other" value="+250 per waiting hour" style="display: none;"/readonly></b>
      <b><input type="text" id="other1" name="other1" value="3500 for 10 hrs plus 200 per hour in OT " style="display: none;"/readonly></b>
 
 	<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
   <td> <input type="text" id="des_pickup" placeholder="Pick-up point" name="des_pickup"></td>
-	
+
 	<tr>
 	</tr>
 	<tr>
-	
+
 	&nbsp; &nbsp;  &nbsp; &nbsp;<td> <input type="text" height="24px" id="des_dropoff" placeholder="Drop-off point" name="des_dropoff"></td>
 	<tr>
 	</tr>
 	<tr>
 	<br>
 	<br>
-	
+
 	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
 												<textarea cols='66' rows='7' placeholder="Other details"></textarea>
-									
-	
+
+
 	<!--<td> <input type="text" id="des_cription" placeholder="Destination information" name="des_cription"></td>-->
-	
+
 	</tr>
 	<tr>
-	<td> 
+	<td>
 	<br>
 
 
@@ -622,26 +622,26 @@ function myFunction() {
 
 	<!--<td style="align:center;"> <br> <br> <center><button type="submit" name="BtnNext">Next</button>    </td>
     -->
-	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
-	
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+
 	<a href='booking-drivers.php'
-	class='btn-lg btn-primary' type='button' name='BtnNext' 
+	class='btn-lg btn-primary' type='button' name='BtnNext'
 	style='text-decoration:none'>NEXT</a>
 
 
-	
-	<!--button type="submit" name="BtnNext">Submit</button--> 
-	
-	
-	</form> 
-	
-	
-	
+
+	<!--button type="submit" name="BtnNext">Submit</button-->
+
+
+	</form>
+
+
+
 	</tr>
 
 	</div>
-	
-	
+
+
 </div>
 </center>
 

@@ -88,7 +88,7 @@ body {
   padding-top: 100px;
   left: 0;
   top: 0;
-  
+
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -200,11 +200,6 @@ img.hover-shadow {
 
 
 </style>
-
-
-
-
-
 <head>
 
     <meta charset="utf-8">
@@ -238,7 +233,7 @@ img.hover-shadow {
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="Gallery.php">Gallery</a>
+                <a class="nav-link" href="gallery.php">Gallery</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Booking.php">Booking</a>
@@ -256,9 +251,9 @@ img.hover-shadow {
                   Other Pages
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                  <a class="dropdown-item" href="login.php">Full Width Page</a>
-                  <a class="dropdown-item" href="signup.php">Sidebar Page</a>
-                  <a class="dropdown-item" href="Become a driver.php">FAQ</a>
+                  <a class="dropdown-item" href="Login.php">Login</a>
+                  <a class="dropdown-item" href="signup.php">signup</a>
+                  <a class="dropdown-item" href="History.php">History</a>
                 </div>
               </li>
               <!--dropdown end-->
@@ -268,11 +263,6 @@ img.hover-shadow {
         </div>
       </nav>
       <!-- navigation end -->
-
-
-
-
-
 
 <body>
 
@@ -290,7 +280,7 @@ require_once('connect.php');
 $dbc = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);// or die ('Error to connect mysql');;
 
 
-$update = "select * from destination"; 
+$update = "select * from destination";
 $updateResult = mysqli_query($dbc,$update);
 
 
@@ -342,7 +332,7 @@ tr:hover {background-color:#f5f5f5;}
 	$password = "";
 	$dbname = "thp";
 	$con = mysqli_connect($host,$user,$password,$dbname) or die("Error " . mysqli_error($con));
-	
+
 $per_page=4;
 
 if (isset($_GET["page"])) {
@@ -363,9 +353,9 @@ $start_from = ($page-1) * $per_page;
 //Selecting the data from table but with limit
 $query = "SELECT * FROM destination LIMIT $start_from, $per_page";
 $result = mysqli_query ($con, $query);
-                   
-?>  
-  <div style="width:1000px;  padding-left:5px; padding-right:5px;"> 
+
+?>
+  <div style="width:1000px;  padding-left:5px; padding-right:5px;">
 <table id="myTable">
 <thead>
     <tr>
@@ -377,11 +367,11 @@ $result = mysqli_query ($con, $query);
       <th>Destination information</th>
       <th>Rate</th>
       <th>Date of departure</th>
-      <th>Date of arrival</th>	  
-   
+      <th>Date of arrival</th>
+
 	  <th> </th>
 
-   
+
     </tr>
 </thead>
 <tbody>
@@ -389,35 +379,35 @@ $result = mysqli_query ($con, $query);
 
 
     <?php
-	
-	
+
+
 	$cnt = 1;
    while($updateRow = mysqli_fetch_array($updateResult))
    {
- 
+
 	    echo"<tr>
 	 	<td>".$cnt++."</td>
-		<td>".$updateRow['des_id']."</td> 
+		<td>".$updateRow['des_id']."</td>
 		<td>".$updateRow['des_location']."</td>
 		<td>".$updateRow['des_pickup']."</td>
 		<td>".$updateRow['des_dropoff']."</td>
-		<td>".$updateRow['des_cription']."</td>		
+		<td>".$updateRow['des_cription']."</td>
         <td> ₱".$updateRow['des_rate']."</td>
    	    <td>".$updateRow['des_date']."</td>
    	    <td>".$updateRow['des_lastDate']."</td>
 
-		
-	
-	
 
-		
 
-		
-		
-		
+
+
+
+
+
+
+
 		 <td><center>
-		
-		
+
+
 	 </tr>";
 	}
 
@@ -433,19 +423,19 @@ $result = mysqli_query ($con, $query);
     </form>-->
 	<br>
 	<br>
-	
-	
-	
-	
+
+
+
+
 
 
 
 <?php
 /*
     <input type="submit" name="export" class="btn btn-success" value="Export" />
-	
-	
-	
+
+
+
 //Now select all from table
 $query = "select * from student_tbl2";
 $result = mysqli_query($con, $query);
@@ -471,7 +461,7 @@ echo "<a href='table.php?page=$total_pages' style='text-decoration:none'><font c
     </tr>
 	</table>
     </div></center>
-    
+
     <div id="id01" class="modal">
 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 
@@ -480,10 +470,10 @@ echo "<a href='table.php?page=$total_pages' style='text-decoration:none'><font c
 
 		<tr>
     <center>
-	
+
 	 <td><center><button type='submit' onclick='delStud(" . $updateRow[0] . ")' name='delbtn' value='Remove'>Remove</button>
 		&nbsp;&nbsp;&nbsp;<a onclick='editStud' name= 'editbtn' value='edit' href='UPDATE_INFO.php?id=" . $updateRow[0] ."'>Edit</a></center></td>
-  
+
 
 -->
 </div>
@@ -497,7 +487,7 @@ echo "<a href='table.php?page=$total_pages' style='text-decoration:none'><font c
 
 /*
 		function myFunction() {
-  // Declare variables 
+  // Declare variables
   var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
@@ -523,7 +513,7 @@ $(document).ready(function() {
         "scrollX": true
     } );
 } );
-</script>   
+</script>
 
 
 
@@ -543,4 +533,3 @@ $(document).ready(function() {
       <!-- Bootstrap core JavaScript -->
       <script src="vendor/jquery/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-

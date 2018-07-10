@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-      <a href = "index.html" >
+      <a href = "index.php" >
         <img src="thp.png" alt="Trulli" width="100" height="55">
       </a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="Gallery.php">Gallery</a>
+                <a class="nav-link" href="gallery.php">Gallery</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Booking.php">Booking</a>
@@ -53,7 +53,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
                   <a class="dropdown-item" href="Login.php">Login</a>
-                  <a class="dropdown-item" href="signup.html">Sign up</a>
+                  <a class="dropdown-item" href="signup.php">signup</a>
                   <a class="dropdown-item" href="History.php">History</a>
                 </div>
               </li>
