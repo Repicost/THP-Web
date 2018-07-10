@@ -110,19 +110,18 @@
       <!-- Page Content -->
       <div class="container">
 
-      <br>
-	  <br>
+         <br />
+	       <br />
         <!-- Features Section -->
         <div class="row">
           <div class="col-lg-6">
             <h2>Modern Business Features</h2>
-<br>
+              <br />
 
-            <p>THP Transport Services is a Group Created exclusively for Van Owners, Authorized Driver of THPTS, Families, Friends, Travel Agencies, Travel Organizers and all that contribute to the Van Tourism Industry.
-
-It is aimed to build closer ties among its members, share common ideas, bind differences and act as one in uplifting the Business of the Team by promoting the Local Tourism Industry of the Country.
-
-We are now making this Page available for all so that we can build a wider and bigger groups that aims to make a sustainable tourism industry. </p>
+              <p>ATHP Transport Services is a Group Created exclusively for Van Owners, Authorized Driver of THPTS, Families, Friends, Travel Agencies, Travel Organizers and all that contribute to the Van Tourism Industry.
+  It is aimed to build closer ties among its members, share common ideas, bind differences and act as one in uplifting the Business of the Team by promoting the Local Tourism Industry of the Country.
+  We are now making this Page available for all so that we can build a wider and bigger groups that aims to make a sustainable tourism industry.
+              </p>
           </div>
           <div class="col-lg-6">
             <img class="img-fluid rounded" src="drivers.jpg" alt="">
@@ -130,11 +129,10 @@ We are now making this Page available for all so that we can build a wider and b
         </div>
         <!-- /.row -->
 
-<br>
+          <br />
 
         <!-- Call to Action Section -->
         <div class="row mb-4">
-
 
         </div>
 

@@ -23,47 +23,47 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-      <a href = "index.html" >
+      <a href = "index.php" >
         <img src="thp.png" alt="Trulli" width="100" height="55">
       </a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-    <!-- Navigation begin -->
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.php">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Booking.php">Booking</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.php">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact</a>
-        </li>
+          <!-- Navigation begin -->
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.php">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Booking.php">Booking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.php">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.php">Contact</a>
+              </li>
 
-        <!--dropdown begin-->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Other Pages
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-            <a class="dropdown-item" href="Login.php">Login </a>
-            <a class="dropdown-item" href="signup.php">Sign Up</a>
-            <a class="dropdown-item" href="History.php">History</a>
+              <!--dropdown begin-->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Other Pages
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                  <a class="dropdown-item" href="Login.php">Login</a>
+                  <a class="dropdown-item" href="signup.php">signup</a>
+                  <a class="dropdown-item" href="History.php">History</a>
+                </div>
+              </li>
+              <!--dropdown end-->
+            </ul>
           </div>
-        </li>
-        <!--dropdown end-->
-      </ul>
-    </div>
 
-  </div>
-</nav>
-<!-- navigation end -->
+        </div>
+      </nav>
+      <!-- navigation end -->
 
     <!-- Page Content -->
     <div class="container">
@@ -147,7 +147,7 @@ We also offer packages such as trip to a certain place and the payment will be p
       </div>
       <!-- /.row -->
 
-     
+
     </div>
     <!-- /.container -->
 
