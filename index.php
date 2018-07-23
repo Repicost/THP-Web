@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>THP</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Font awesome Style-sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
 
@@ -117,27 +116,70 @@
           <div class="col-lg-6">
             <h2>Modern Business Features</h2>
               <br />
-
-              <p>ATHP Transport Services is a Group Created exclusively for Van Owners, Authorized Driver of THPTS, Families, Friends, Travel Agencies, Travel Organizers and all that contribute to the Van Tourism Industry.
-  It is aimed to build closer ties among its members, share common ideas, bind differences and act as one in uplifting the Business of the Team by promoting the Local Tourism Industry of the Country.
-  We are now making this Page available for all so that we can build a wider and bigger groups that aims to make a sustainable tourism industry.
+              <p>
+                 ATHP Transport Services is a Group Created exclusively for Van Owners,
+                 Authorized Driver of THPTS, Families, Friends, Travel Agencies, Travel
+                 Organizers and all that contribute to the Van Tourism Industry.
+                 It is aimed to build closer ties among its members, share common ideas,
+                 bind differences and act as one in uplifting the Business of the Team by
+                 promoting the Local Tourism Industry of the Country.
+                 We are now making this Page available for all so that we can build a wider and
+                bigger groups that aims to make a sustainable tourism industry.
               </p>
+
           </div>
           <div class="col-lg-6">
             <img class="img-fluid rounded" src="drivers.jpg" alt="">
           </div>
         </div>
         <!-- /.row -->
-
           <br />
-
-        <!-- Call to Action Section -->
-        <div class="row mb-4">
-
-        </div>
-
       </div>
       <!-- /.container -->
+
+
+      <div class="col-sm-12" style="border-bottom: 3px solid black; margin-top: 20px;"></div>
+        <br />
+    		<div class="container">
+            <div class="row">
+
+              <div class="col-sm-6">
+                <div class="row">
+                  <div class="col-sm-5">
+          					<h3>
+          						<i class="fa fa-desktop fa-5x" aria-hidden="true"></i>
+          					</h3>
+          				</div>
+                  <div class="col-sm-7">
+          				<h3>Book From web</h3>
+          					<p>
+          						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          					</p>
+          					<button type="button" class="btn btn-default" href="#">Book now</button>
+          				</div>
+                </div>
+              </div>
+
+
+              <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-3">
+                      <h2>
+                        <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
+                      </h2>
+                    </div>
+                    <div class="col-sm-9">
+                      <h3>Book From mobile</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+  		<div class="col-sm-12" style="border-bottom: 1px solid black; margin-top: 20px;"></div>
 
       <!-- Footer -->
       <footer class="py-5 bg-dark">

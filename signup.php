@@ -12,7 +12,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- Font awesome Style-sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
 
@@ -65,60 +66,62 @@
       </nav>
       <!-- navigation end -->
 
-    <div class="container" style="padding: 100px;">
-	<div class="col-sm-6" class="formClass">
-		<div class="rows">
-			<h1>SIGNUP</h1>
-		</div>
-		<form method="post" action="views/requires/register.php">
-				<div class="rows">
-					<div class="contianer">
-						<div class="rows">
-							<h6> Email </h6>
-							<input type="text" name="Email" class="form-control" id="email">
-						</div>
-						<div class="rows">
-							<h6> Password </h6>
-							<input type="password" name="Password" class="form-control">
-						</div>
-						<div class="rows">
-							<h6> Retype password </h6>
-							<input type="password" name="secondPword"class="form-control">
-						</div>
-						<div class="rows" style="margin-left: -15px; padding-bottom: 70px;">
-							<div class="col-sm-6">
-								<h6> First Name </h6>
-								<input type="text" name="fName" class="form-control">
-							</div>
-							<div class="col-sm-6">
-								<h6> Last Name </h6>
-								<input type="text" name="lName" class="form-control">
-							</div>
-						</div>
-						<div class="rows">
-							<h6> Contact Number </h6>
-							<input type="text" name="contactNo" class="form-control">
-						</div>
-						<div class="rows">
-							<h6> Address </h6>
-							<input type="text" name="address" class="form-control">
-						</div>
-					</div>
-				</div>
-				<div class="rows">
-					<div class="col-sm-6" style="margin-left: -20px; margin-top: 20px;">
-						<button type="submit" name="register" class="btn-lg btn-danger active" value="Submit data">REGISTER</button>
-					</div>
-				</div>
-			</form>
-	</div>
-	<div class="col-sm-6">
-		<img src="<?php echo PROFILE_LOGO;?>" style="height: 200px; width: 200px; margin: 150px;">
-	</div/>
-</div>
+    <div class="container" style="padding:100px;">
+      <div class="rows">
+        <h1>SIGNUP</h1>
+      </div>
 
+      <div class="row">
+        <div class="col-sm-6">
+          <form method="post" action="views/requires/register.php">
+     				<div class="rows">
+     					<div class="contianer">
+     						<div class="rows">
+     							<h6> Email </h6>
+     							<input type="text" name="Email" class="form-control" id="email">
+     						</div>
+     						<div class="rows">
+     							<h6> Password </h6>
+     							<input type="password" name="Password" class="form-control">
+     						</div>
+     						<div class="rows">
+     							<h6> Retype password </h6>
+     							<input type="password" name="secondPword"class="form-control">
+     						</div>
+     						<div class="rows" style="margin-left: -15px; padding-bottom: 70px;">
+     							<div class="col-sm-6">
+     								<h6> First Name </h6>
+     								<input type="text" name="fName" class="form-control">
+     							</div>
+     							<div class="col-sm-6">
+     								<h6> Last Name </h6>
+     								<input type="text" name="lName" class="form-control">
+     							</div>
+     						</div>
+     						<div class="rows">
+     							<h6> Contact Number </h6>
+     							<input type="text" name="contactNo" class="form-control">
+     						</div>
+     						<div class="rows">
+     							<h6> Address </h6>
+     							<input type="text" name="address" class="form-control">
+     						</div>
+     					</div>
+     				</div>
+     				<div class="rows">
+     					<div class="col-sm-6" style="margin-left: -20px; margin-top: 20px;">
+     						<button type="submit" name="register" class="btn-lg btn-danger active" value="Submit data">REGISTER</button>
+     					</div>
+     				</div>
+     			</form>
+        </div>
+        <div class="col-sm-6">
+          <h1>
+            <i class="fa fa-address-card fa-9x"></i>
+          </h1>
+       </div>
+      </div>
     </div>
-    <!-- /.container -->
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">

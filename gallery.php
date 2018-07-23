@@ -270,16 +270,16 @@
         <br>
       <div class="row">
         <div class="column">
-          <img src="coleen.jpg" style="width:90%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          <img src="sample/coleen_wide.jpg" style="width:90%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
         </div>
         <div class="column">
-          <img src="foreigners.jpg" style="width:90%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+          <img src="sample/foreigners_wide.jpg" style="width:90%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
         </div>
         <div class="column">
-          <img src="ilocos.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+          <img src="sample/ilocos_wide.jpg" style="width:90%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
         </div>
         <div class="column">
-          <img src="baler.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+          <img src="sample/baler_wide.jpg" style="width:90%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
         </div>
       </div>
 
@@ -289,22 +289,22 @@
 
           <div class="mySlides">
             <div class="numbertext">1 / 4</div>
-            <img src="coleen_wide.jpg" style="width:100%">
+            <img src="sample/coleen_wide.jpg" style="width:100%">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">2 / 4</div>
-            <img src="foreigners_wide.jpg" style="width:100%">
+            <img src="sample/foreigners_wide.jpg" style="width:100%">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">3 / 4</div>
-            <img src="ilocos_wide.jpg" style="width:100%">
+            <img src="sample/ilocos_wide.jpg" style="width:100%">
           </div>
 
           <div class="mySlides">
             <div class="numbertext">4 / 4</div>
-            <img src="baler.jpg" style="width:100%">
+            <img src="sample/baler_wide.jpg" style="width:100%">
           </div>
 
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

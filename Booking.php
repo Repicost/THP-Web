@@ -107,7 +107,6 @@ input[type=date],select {
 
 <br>
 
-
 <?php
 
 	$host = "localhost";
@@ -164,167 +163,71 @@ if(isset($_POST['BtnNext'])){
     }
 
 
-
-
-
-
-
 	$query= "INSERT INTO `destination`(`des_location`,`des_pickup`, `des_dropoff`,
 	`des_cription`, `des_rate`, `des_date`, `des_lastDate`)
 	VALUES ('$des_location','$des_pickup','$des_dropoff','$des_cription','$des_rate','$des_date','$des_lastDate')";
 	$result=mysqli_query($con,$query) or die ('ff');
 		echo "<script>alert('Processed Successfully!')</script>";
 		echo "<script>setTimeout(\"location.href='history.php';\",0);</script>";
-
-
-
-
-	//if(mysqli_query($con,"INSERT INTO student_tbl (StudNum, Fname, Lname, Age, Gender) VALUES ('$StudNum', '$Fname', '$Lname', '$Age', '$Gender')"))
 }
-
-
-
-
-
 
 ?>
 
-
-<!--form action = "inserted.php" method="POST">
-<!--<body style="background-clor:white-space;">-->
 
 <div class="container" style="padding:100px;">
 
 
 <div class ="rows">
-
-		<!--div class ="col-sm-1">
-
-			<img src="<?php echo PROFILE_LOGO;?>" style="height: 50px; width: 50px;">
-		</div>
-               <!--?php
-				$email = $_SESSION['Email'];
-				$dbc = mysqli_connect('localhost', 'root', '', 'thp') or die("Unable to connect to Database.");
-				$sql = "SELECT firstname, lastname, address FROM user WHERE email = '$email'";
-				mysqli_select_db($dbc,"dropdown");
-
-
-
-				$result1 = mysqli_query($dbc, $sql);
-				$row = mysqli_fetch_array($result1);
-
-				echo "<p>" . $row["lastname"] . ", " . $row["firstname"] . "</p>";
-				echo "<p>" . $row["address"] . "</p>";
-
 				<?php
 				$email = $_SESSION['Email'];
 				$dbc = mysqli_connect('localhost', 'root', '', 'thp') or die("Unable to connect to Database.");
 				$sql = "SELECT firstname, lastname, address FROM user WHERE email = '$email'";
 				mysqli_select_db($dbc,"dropdown");
 
-
-
 				$result1 = mysqli_query($dbc, $sql);
 				$row = mysqli_fetch_array($result1);
 
 				echo "<p>" . $row["lastname"] . ", " . $row["firstname"] . "</p>";
 				echo "<p>" . $row["address"] . "</p>";
 
-
-
-
-
-
-
-
-
 ?>
 
+  <div class="myClass">
 
 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#des_location').change(function(){
+      if($('#des_location').val() === 'NAIA')
+         {
+         $('#other').show();
+         }
+      else
+         {
+         $('#other').hide();
+         }
+    });
+  });
+  </script>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+  $('#des_location').change(function(){
+  if($('#des_location').val() === 'MANILA')
+     {
+     $('#other1').show();
+     }
+  else
+     {
+     $('#other1').hide();
+     }
+  });
+  });
 
 
-
-
-
-?-->
-
-
-
-
-
-
-
-<div class="myClass">
-
-
-
-
- <!--?php
-				$email = $_SESSION['Email'];
-				$host = "localhost";
-				$user = "root";
-				$password = "";
-				$dbname = "thp";
-				$con = mysqli_connect($host,$user,$password,$dbname) or die("Error " . mysqli_error($con));
-
-
-				$query = "select * from 'booking'";
-                $result= mysqli_query($con, $query);
-				$result2= mysqli_query ($con, $query);
-				$options = "";
-				while($row2 = mysqli_fetch_array($result2))
-				{
-					$options = $options."<options>$row2[1]</option>"
-
-				}
-
-
-				//echo "<p>" . $row["lastname"] . ", " . $row["firstname"] . "</p>";
-			//	echo "<p>" . $row["address"] . "</p>";
-
-
-
-?-->
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-$('#des_location').change(function(){
-if($('#des_location').val() === 'NAIA')
-   {
-   $('#other').show();
-   }
-else
-   {
-   $('#other').hide();
-   }
-});
-});
-
-
-</script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-$('#des_location').change(function(){
-if($('#des_location').val() === 'MANILA')
-   {
-   $('#other1').show();
-   }
-else
-   {
-   $('#other1').hide();
-   }
-});
-});
-
-
-</script>
-
-
-
-
+  </script>
 
   <form method="post"  enctype="multipart/form-data">
 	&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp;
@@ -353,45 +256,6 @@ else
 			 }
             </script>
 
-	<!--<select name="des_location" id="des_location" class="des_location" placeholder="Destination" name="des_location" >
-  <option selected="selected" value=""  disabled> select... </option>
-  </select>-->
-<!--?php
-
-
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$databaseName = "thp";
-
-
-// connect to mysql database
-
-$connect = mysqli_connect($hostname, $username, $password, $databaseName);
-
-// mysql select query
-$query = "SELECT * FROM `booking`";
-
-// for method 1
-
-$result1 = mysqli_query($connect, $query);
-
-// for method 2
-
-$result2 = mysqli_query($connect, $query);
-
-$options = "";
-
-
-
-
-while($row2 = mysqli_fetch_array($result2))
-{
-    $options = $options."<option>$row2[1]</option>";
-}
-
-?-->
-
 <!DOCTYPE html>
 
 <html>
@@ -403,58 +267,6 @@ while($row2 = mysqli_fetch_array($result2))
     </head>
 
     <body>
-
-        <!--Method One-->
-
-        <!--select>
-
-            <!--?php while($row1 = mysqli_fetch_array($result1)):;?>
-
-            <option value="<!--?php echo $row1[0];?>"><!--?php echo $row1[0];?></option>
-
-            <!--?php endwhile;?>
-
-        </select>
-
-       <!-- Method Two -->
-
-       <!--&nbsp; &nbsp; &nbsp; &nbsp; Price: 	<select>
-           <!--?php echo $options;?>
-        </select>
-
-
-
-
-
-
-
-
-
-	</tr>
-	<tr>
-
-	<!--<td> &nbsp; &nbsp; &nbsp; Price:  <td> <input type="text" id="des_rate" name="des_rate" readonly> </td>
-	<!--<p id="des_rate" class="des_rate" name="des_rate" style="display:none">3900!</p>-->
-	</tr>
-	<br>
-	<br>
-
-
-
-	<!--​<script>
-function myFunction() {
-    var option = document.getElementById("Kawit");
-    var des_rate = document.getElementById("des_rate");
-    if (option.selected == true){
-        des_rate.style.display = "block";
-    } else {
-       des_rate.style.display = "none";
-    }
-}
-</script>-->
-
-
-
 
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; From Metro Manila to :
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; Price:
@@ -487,13 +299,13 @@ function myFunction() {
 		<option value=''>Laguna,San Pedro</option>
 		<option value=''>Laguna,Splash Island</option>
 		<option value=''>Laguna,Biñan</option>
-        <option value=''>Laguna,Sta.Rosa</option>
+    <option value=''>Laguna,Sta.Rosa</option>
 		<option value=''>Laguna,Cabuyao</option>
 		<option value=''>Laguna,Calamba</option>
 		<option value=''>Laguna,Los Baños</option>
 		<option value=''>Laguna,Calauan</option>
 		<option value=''>Laguna,Pandin Lake</option>
-     	<option value=''>Laguna,Alaminos</option>
+    <option value=''>Laguna,Alaminos</option>
 		<option value=''>Laguna,San Pablo</option>
 		<option value=''>Laguna,Sta.Cruz</option>
 		<option value=''>Laguna,Nagcarlan</option>
@@ -521,62 +333,54 @@ function myFunction() {
 		<option value=''>Quezon,Calauag </option>
 		<option value=''>Quezon,San Narciso</option>
 
-	    <option value=''>Enchanted Kingdom</option>
+	  <option value=''>Enchanted Kingdom</option>
 		<option value=''>Bulacan</option>
-	    <option value=''>Pansol,Laguna(day tour)</option>
+	  <option value=''>Pansol,Laguna(day tour)</option>
 		<option value=''>Tagaytay(day tour)</option>
-	    <option value=''>Nasugbu(day tour)</option>
+	  <option value=''>Nasugbu(day tour)</option>
 		<option value=''>Ternate(day tour)</option>
-	    <option value=''>Pico de Loro(day tour)</option>
+	  <option value=''>Pico de Loro(day tour)</option>
 		<option value=''>Batulao,Batangas(day tour)</option>
-	    <option value=''>Gulugod,Batangas(day tour)</option>
+	  <option value=''>Gulugod,Batangas(day tour)</option>
 		<option value=''>Cuenca,Batangas(day tour)</option>
-	    <option value=''>Maculot,Batangas(day tour)</option>
+	  <option value=''>Maculot,Batangas(day tour)</option>
 		<option value=''>Laiya,San Juan(day tour)</option>
-	    <option value=''>Laiya,San Juan(overnight)</option>
+	  <option value=''>Laiya,San Juan(overnight)</option>
 		<option value=''>Lucban(day tour)</option>
 		<option value=''>Lucban(2 days 1 night)</option>
 		<option value=''>Pagbilao(day tour)</option>
 		<option value=''>Pagbilao(2 days 1 night)</option>
-	    <option value=''>Kwebang Lagpas(day tour)</option>
+	  <option value=''>Kwebang Lagpas(day tour)</option>
 		<option value=''>Kwebang Lagpas(2 days 1 night)</option>
 		<option value=''>Mauban Port,Borawan,Real,Jomalig(2 days 1 night)</option>
-	    <option value=''>Mt. Batolusong,Mt. Cayabo,Mt. Maynobo,Tanay,Rizal(day tour)</option>
+	  <option value=''>Mt. Batolusong,Mt. Cayabo,Mt. Maynobo,Tanay,Rizal(day tour)</option>
 		<option value=''>Mt. Daraitan,Masungi Georeserve(day tour)</option>
 		<option value=''>Subic(day tour)</option>
 		<option value=''>Las Casas(day tour)</option>
-	    <option value=''>Bagac(day tour)</option>
+	  <option value=''>Bagac(day tour)</option>
 		<option value=''>Tarak(Mariveles, Morong)(day hike)</option>
 		<option value=''>Tarak(Mariveles, Morong)(overnight)</option>
-	    <option value=''>Dingalan,Minalungao,Mt. Sawi(day tour)</option>
+	  <option value=''>Dingalan,Minalungao,Mt. Sawi(day tour)</option>
 		<option value=''>Baler,Dipacutan(2 days 1 night)</option>
-	    <option value=''>Tarlac,Hundred Islands,Bolinao,Patar,La Union(day tour) </option>
+	  <option value=''>Tarlac,Hundred Islands,Bolinao,Patar,La Union(day tour) </option>
 		<option value=''>San Antonio,Potipot,Pundaquit,Nagsasa Cove,Candelaria,Zambales(day tour)</option>
 		<option value=''>San Antonio,Potipot,Pundaquit,Nagsasa Cove,Candelaria,Zambales(2 days, 1 night)</option>
-	    <option value=''>Palauig,Tapulao,Iba(day hike)</option>
+	  <option value=''>Palauig,Tapulao,Iba(day hike)</option>
 		<option value=''>Palauig,Tapulao,Iba(overnight)</option>
 		<option value=''>Magalawa Island(2 days, 1 night)</option>
-	    <option value=''>Baguio,Benguet,La Preza,La Trinidad,Mt.Ulap,Mt. Purgatory,Mt. Pulag(day tour)</option>
+	  <option value=''>Baguio,Benguet,La Preza,La Trinidad,Mt.Ulap,Mt. Purgatory,Mt. Pulag(day tour)</option>
 		<option value=''>Baguio,Benguet,La Preza,La Trinidad,Mt.Ulap,Mt. Purgatory,Mt. Pulag(2 days, 1 night)</option>
 		<option value=''>Mt. Ugo(2 days, 1 night)</option>
-	    <option value=''>Sagada, Banaue, Kalinga, Buscalan(3 days,2 nights)</option>
+	  <option value=''>Sagada, Banaue, Kalinga, Buscalan(3 days,2 nights)</option>
 		<option value=''>Ilocos Tour(3 days, 2 nights)</option>
 		<option value=''>Calaguas(2 days, 1 night)</option>
 		<option value=''>Sabang Port(2 days, 1 night)</option>
-	    <option value=''>Caramoan(3 days,2 nights)</option>
+	  <option value=''>Caramoan(3 days,2 nights)</option>
 		<option value=''>Albay(3 days, 2 nights)</option>
-	    <option value=''>Matnog(3 days, 2 nights)</option>
-
-
-
+	  <option value=''>Matnog(3 days, 2 nights)</option>
 
 		<!--option value=''>Item 8</item-->
 		</select>
-
-
-
-
-
 
 	 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <td><input type='text' id='des_rate' name='des_rate' value='No location Selected' readonly>
 		</form>
@@ -603,14 +407,10 @@ function myFunction() {
 	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
 												<textarea cols='66' rows='7' placeholder="Other details"></textarea>
 
-
-	<!--<td> <input type="text" id="des_cription" placeholder="Destination information" name="des_cription"></td>-->
-
 	</tr>
 	<tr>
 	<td>
 	<br>
-
 
 	&nbsp; &nbsp; &nbsp;  &nbsp; From: <input type="date" id="des_date" value="0000-00-00" name="des_date"></td>
 	</tr>
@@ -628,24 +428,15 @@ function myFunction() {
 	class='btn-lg btn-primary' type='button' name='BtnNext'
 	style='text-decoration:none'>NEXT</a>
 
-
-
 	<!--button type="submit" name="BtnNext">Submit</button-->
 
-
 	</form>
-
-
-
 	</tr>
 
 	</div>
 
-
 </div>
 </center>
-
-
 
 
 </div>

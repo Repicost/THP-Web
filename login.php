@@ -66,32 +66,40 @@
       <!-- navigation end -->
 
       <div class="container" style="padding: 50px;">
-        <form method="post" action="<?php echo BASE_URL;?> login">
-          <div   class="formClass" style="border-right: solid">
-            <div class="rows">
-              <h1> LOGIN </h1>
+        <form method="post">
+        <div class="row" >
+          <div class = "col-sm-6" class="formClass" style="border-right: solid">
+          			<div class="rows">
+          				<h1> LOGIN </h1>
+          			</div>
+          				<div class = "rows">
+          					<h6> Email </h6>
+          					 <input type="email" name="Email" class="form-control">
+          				</div>
+          				<div class="rows">
+          					<h6> Password </h6>
+          					<input type="password" name="password" class="form-control">
+          				</div>
+          				<div class="container" style="margin-left: -30px; margin-top: 20px;">
+          					<div class="col-sm-2">
+          						<button type="submit" name="login_user" class="btn-lg btn-danger active">SIGN-IN</button>
+          					</div>
+          					<div class="col-sm-3" style="margin-top: 20px;">
+          						<a href="#" class="text-center">Forgot Password?</a>
+          					</div>
+          				</div>
+          		</div>
+          		<div class = "col-sm-6" style="margin-top: 100px;">
+            		<div class="rows">
+            			<p class="text-center">Don't have an account yet?</p>
+            		</div>
+            		 <div class="rows">
+            				<center><a href="<?php echo BASE_URL;?>sign-up" class="btn-lg btn-primary" role="button" style="text-decoration:none;">SIGN-UP</a><center>
+            		 </div>
+          		</div>
             </div>
-              <div class = "rows">
-                <h6> Email </h6>
-                 <input type="email" name="Email" class="form-control">
-              </div>
-              <div class="rows">
-                <h6> Password </h6>
-                <input type="password" name="password" class="form-control">
-              </div>
-              <a href="#" class="text-center">Forgot Password?</a>
-              <div class="container" style="margin-left: -30px; margin-top: 20px;">
-                <div class="col-sm-4">
-                  <button type="submit" name="login_user" class="btn-lg btn-danger active" style="float:left;">SIGN-IN</button>
-                </div>
-                <div class="col-sm-4" style="float:right; margin-top:-2px;">
-                  <button type="submit" name="login_user" class="btn-lg btn-primary active" style="float:left;">SIGN-UP</button>
-                  <!-- <a href="<?php echo BASE_URL;?>sign-up" class="btn-lg btn-primary active" role="button" style="text-decoration:none;">SIGN-UP</a> -->
-                </div>
-              </div>
-          </div>
         </form>
-    </div>
+      </div>
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
